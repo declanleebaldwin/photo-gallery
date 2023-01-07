@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import { initializeApp } from "firebase/app";
 import { FIREBASE_CONFIG } from "./config"
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = FIREBASE_CONFIG;
-
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
 );
