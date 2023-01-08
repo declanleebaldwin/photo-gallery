@@ -12,7 +12,7 @@ export const useCollection = ({ collectionName }) => {
       const querySnapshot = await getDocs(collection(db, collectionName));
       querySnapshot.forEach((doc) => {
         console.log(doc.data())
-        docs.push(doc.data())
+        docs.push({ ...doc.data(), id: doc.id })
       });
       setDocuments(docs)
 

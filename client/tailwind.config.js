@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        "gallery": "repeat(3, minimax(1, 1fr))"
+        "gallery": "repeat(3 ,minmax(0,1fr))",
       }
     },
   },
