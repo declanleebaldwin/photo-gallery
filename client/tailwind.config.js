@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        "gallery": "repeat(3, minimax(1, 1fr))"
+      }
+    },
   },
   plugins: [],
 }
